@@ -21,11 +21,15 @@ class PlayingCardView: UIView {
     
     @objc func adjustFaceCardScale(byHandlingGestureRecognizerBy recognizer: UIPinchGestureRecognizer) {
         switch recognizer.state {
-        case .changed:
+        case .changed, .ended:
             faceCardScale *= recognizer.scale
             recognizer.scale = 1.0
         default: break
         }
+    }
+    
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .ellipse
     }
     
     
@@ -81,7 +85,7 @@ class PlayingCardView: UIView {
             .rotated(by: CGFloat.pi)
         lowerRightCornerLabel.frame.origin = CGPoint(x: bounds.maxX, y: bounds.maxY)
             .offsetBy(dx: -cornerOffset, dy: -cornerOffset)
-        .offsetBy(dx: -lowerRightCornerLabel.frame.size.width, dy: -lowerRightCornerLabel.frame.size.height)
+            .offsetBy(dx: -lowerRightCornerLabel.frame.size.width, dy: -lowerRightCornerLabel.frame.size.height)
     }
     
     
@@ -128,7 +132,7 @@ class PlayingCardView: UIView {
     
     
     
-
+    
     override func draw(_ rect: CGRect) {
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         
@@ -196,7 +200,7 @@ extension PlayingCardView {
             return "?"
         }
     }
-
+    
 }
 
 extension CGRect {

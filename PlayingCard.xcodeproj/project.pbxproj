@@ -45,6 +45,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC360E6214098FD00C9675A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3ACA35D721362A64001A62ED /* PlayingCardDeck.swift */,
+				3ACA35D4213625F6001A62ED /* PlayingCard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		3ACA35B52136259D001A62ED = {
 			isa = PBXGroup;
 			children = (
@@ -64,10 +73,9 @@
 		3ACA35C02136259D001A62ED /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
+				3AC360E6214098FD00C9675A /* Model */,
 				3ACA35C32136259D001A62ED /* ViewController.swift */,
 				3ACA35C52136259D001A62ED /* Main.storyboard */,
-				3ACA35D4213625F6001A62ED /* PlayingCard.swift */,
-				3ACA35D721362A64001A62ED /* PlayingCardDeck.swift */,
 				3ACA35D921364D26001A62ED /* PlayingCardView.swift */,
 				3A26E9612137BDB7009F3DC8 /* CardBehavior.swift */,
 				3AA47BF2213F391300F98E9C /* CMMotionManager+shared.swift */,
