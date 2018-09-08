@@ -6,6 +6,6 @@
 * Animation
 * Core Motion
 ### Main feature demo
-![](https://storage.googleapis.com/chatroom.geekliubo.com/github/playing_card.gif)  
+![](https://github.com/BobbyLiu66/PlayingCard/blob/master/PlayingCard/Support%20Files/playing_card.gif)  
 The card back picture from: https://www.hearthpwn.com/guides/592-the-card-backs-of-hearthstone   
 The background piture from: https://wallpapertag.com/rustic-background
