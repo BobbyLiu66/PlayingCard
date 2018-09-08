@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     var deck = PlayingCardDeck()
     
-    
     @IBOutlet var cardViews: [PlayingCardView]!
     
     lazy var animator = UIDynamicAnimator(referenceView: view)
@@ -87,7 +86,7 @@ class ViewController: UIViewController {
         case .ended:
             if let chosenCardView = recognizer.view as? PlayingCardView, faceUpCardViews.count < 2 {
                 lastChosenCardView = chosenCardView
-                cardBehavior.removeItem(chosenCardView)
+//                cardBehavior.removeItem(chosenCardView)
                 UIView.transition(with: chosenCardView,
                                   duration: 0.6,
                                   options: [.transitionFlipFromLeft],
@@ -96,7 +95,8 @@ class ViewController: UIViewController {
                                   },
                                   completion:{ finished in
                                     let cardsToAnimate = self.faceUpCardViews
-                                    if self.faceUpCardViewMatch{
+                                    
+                                    if self.faceUpCardViewMatch {
                                         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.6, delay: 0, options: [], animations: {
                                             cardsToAnimate.forEach{
                                                 $0.transform = CGAffineTransform.identity.scaledBy(x: 3.0, y: 3.0)
