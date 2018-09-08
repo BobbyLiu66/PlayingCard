@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     var deck = PlayingCardDeck()
     
+    
     @IBOutlet var cardViews: [PlayingCardView]!
     
     lazy var animator = UIDynamicAnimator(referenceView: view)
@@ -50,6 +51,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "table.png")!)
+        
         var cards = [PlayingCard]()
         for _ in 1...((cardViews.count + 1)/2) {
             let card = deck.draw()!
